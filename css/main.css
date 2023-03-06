@@ -1,0 +1,115 @@
+:root {
+    --font: Montserrat, Arial, Helvetica, sans-serif;
+    --blue-gradient: linear-gradient(180deg, rgba(104,39,249,1) 0%, rgba(17,141,240,1) 100%);
+    --blue-color: #3F57F5;
+    --lightgray-color: #A9A9B0;
+    --darkgray-color: #3B3B3B;
+    --spacing: 1.67rem;
+    --size-headings: 1.34rem; /* 16pt */
+    --size-p: 1.17rem; /* 14pt */
+    --size-a: 1rem; /* 12pt */
+    --size-labels: 0.84rem; /* 10pt */
+    --weight-semibold: 600;
+    --weight-medium: 500;
+    font-family: var(--font);
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--darkgray-color);
+}
+
+body {
+    padding: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-around;
+}
+
+footer {
+    justify-self: flex-end;
+}
+
+h1 {
+    font-size: var(--size-headings);
+    font-weight: var(--weight-semibold);
+}
+
+a {
+    text-decoration: none;
+    font-size: var(--size-a);
+    color: var(--darkgray-color);
+}
+
+a:hover {
+    color: var(--blue-color);
+}
+
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.login main {
+    display: flex;
+    flex-direction: column;
+}
+
+.login main a {
+    align-self: center;
+    margin-top: var(--spacing);
+}
+
+
+.login footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: flex-end;
+}
+
+.login footer a {
+    font-weight: var(--weight-semibold);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.login-form .icon {
+    position: absolute;
+    bottom: 4rem;
+    right: .3rem;
+    cursor: pointer;
+}
+
+label {
+    font-size: var(--size-labels);
+    padding-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid var(--lightgray-color);
+    margin-bottom: 1rem;
+}
+
+input::placeholder {
+    font-size: var(--size-p);
+    font-family: var(--font);
+    padding-bottom: 0.5rem;
+}
+
+input[type="submit"] {
+    background: var(--blue-gradient);
+    border: none;
+    border-radius: 6px;
+    flex-basis: 2.75rem;
+    color: white;
+    font-family: var(--font);
+    font-size: var(--size-p);
+    margin-top: 2rem;
+}
+
