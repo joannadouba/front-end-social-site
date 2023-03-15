@@ -11,6 +11,7 @@
     --size-labels: 0.84rem; /* 10pt */
     --weight-semibold: 600;
     --weight-medium: 500;
+    --rounded: 8px;
     box-sizing: border-box;
     font-family: var(--font);
     font-size: 1rem;
@@ -113,7 +114,7 @@ input::placeholder {
 input[type="submit"] {
     background: var(--blue-gradient);
     border: none;
-    border-radius: 6px;
+    border-radius: var(--rounded);
     flex-basis: 2.75rem;
     color: white;
     font-family: var(--font);
@@ -225,10 +226,10 @@ input[type="submit"] {
         "img time";
 }
 
-.feed-card img {
-    border-radius: 8px;
+.feed-card>img {
+    border-radius: var(--rounded);
 }
-.feed-card .by-line img {
+.avatar {
     width: 3rem;
     border-radius: 50%;
     grid-area: img;
@@ -260,8 +261,73 @@ input[type="submit"] {
 
 .feed-card .img-details .buttons i {
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: var(--rounded);
     box-shadow: 0 -10px 10px 0px rgba(0,0,0,0.1);
     margin-left: 0.5rem;
 }
 
+.featured-stories figure {
+    position: relative;
+}
+
+.featured-stories h2 {
+    text-transform: uppercase;
+}
+
+.featured-stories .avatar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.featured-stories .time {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    color: white;
+}
+
+.featured-stories figcaption {
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.featured-stories h3 {
+    margin-bottom: .25rem;
+}
+.featured-stories figcaption p {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.featured-stories .slider figure>img {
+    border-radius: var(--rounded);
+    height: 27rem;
+}
+
+.featured-stories .slider {
+    /* display: flex; */
+    position: relative;
+}
+
+.featured-stories .slider figure:first-of-type {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    transform: scale(0.9) translate(-24rem, -1rem);
+}
+
+.featured-stories .slider figure:last-of-type {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    transform: scale(0.9) translate(24rem, -1rem);
+}
+
+.editors-pick img {
+    width: calc(100% + 4.85rem);
+    max-width: calc(100% + 4.85rem);
+    margin-left: -2.67rem;
+}
